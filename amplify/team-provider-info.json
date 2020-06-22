@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-justcoach-dev-204437-authRole",
+            "UnauthRoleArn": "arn:aws:iam::070598107628:role/amplify-justcoach-dev-204437-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::070598107628:role/amplify-justcoach-dev-204437-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-justcoach-dev-204437-deployment",
+            "UnauthRoleName": "amplify-justcoach-dev-204437-unauthRole",
+            "StackName": "amplify-justcoach-dev-204437",
+            "StackId": "arn:aws:cloudformation:eu-west-2:070598107628:stack/amplify-justcoach-dev-204437/a9341c00-b3f7-11ea-b82d-0a967d6d9d80",
+            "AmplifyAppId": "d19wgoy8rbpx77"
+        },
+        "categories": {
+            "auth": {
+                "justcoach074f41a5": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d19wgoy8rbpx77",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+type Coach @model {
+  id: ID!
+  firstName: String!
+  secondName: String!
+  sport: String!
+  coachingCerts: String
+  introduction: String
+  postcode: String
+}
+
+type School @model {
+  id: ID!
+  schoolName: String!
+  postcode: String
+}
