@@ -11,6 +11,7 @@ export const getCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -31,6 +32,7 @@ export const listCoachs = /* GraphQL */ `
         coachingCerts
         introduction
         postcode
+        imgURL
         createdAt
         updatedAt
       }
@@ -60,6 +62,45 @@ export const listSchools = /* GraphQL */ `
         id
         schoolName
         postcode
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getPicture = /* GraphQL */ `
+  query GetPicture($id: ID!) {
+    getPicture(id: $id) {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listPictures = /* GraphQL */ `
+  query ListPictures(
+    $filter: ModelPictureFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPictures(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        owner
+        file {
+          bucket
+          region
+          key
+        }
         createdAt
         updatedAt
       }

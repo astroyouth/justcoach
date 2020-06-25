@@ -6,10 +6,25 @@ type Coach @model {
   coachingCerts: String
   introduction: String
   postcode: String
+  imgURL: String
 }
 
 type School @model {
   id: ID!
   schoolName: String!
   postcode: String
+}
+
+# type Picture @model @auth(rules:[{allow: public , provider: iam,}]) {
+type Picture @model {
+  id: ID!
+  name: String
+  owner: String
+  file: S3Object
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
 }

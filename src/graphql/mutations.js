@@ -14,6 +14,7 @@ export const createCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -32,6 +33,7 @@ export const updateCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -50,6 +52,7 @@ export const deleteCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -92,6 +95,63 @@ export const deleteSchool = /* GraphQL */ `
       id
       schoolName
       postcode
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createPicture = /* GraphQL */ `
+  mutation CreatePicture(
+    $input: CreatePictureInput!
+    $condition: ModelPictureConditionInput
+  ) {
+    createPicture(input: $input, condition: $condition) {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updatePicture = /* GraphQL */ `
+  mutation UpdatePicture(
+    $input: UpdatePictureInput!
+    $condition: ModelPictureConditionInput
+  ) {
+    updatePicture(input: $input, condition: $condition) {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deletePicture = /* GraphQL */ `
+  mutation DeletePicture(
+    $input: DeletePictureInput!
+    $condition: ModelPictureConditionInput
+  ) {
+    deletePicture(input: $input, condition: $condition) {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
       createdAt
       updatedAt
     }

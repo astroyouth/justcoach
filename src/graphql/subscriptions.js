@@ -11,6 +11,7 @@ export const onCreateCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -26,6 +27,7 @@ export const onUpdateCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -41,6 +43,7 @@ export const onDeleteCoach = /* GraphQL */ `
       coachingCerts
       introduction
       postcode
+      imgURL
       createdAt
       updatedAt
     }
@@ -74,6 +77,54 @@ export const onDeleteSchool = /* GraphQL */ `
       id
       schoolName
       postcode
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreatePicture = /* GraphQL */ `
+  subscription OnCreatePicture {
+    onCreatePicture {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdatePicture = /* GraphQL */ `
+  subscription OnUpdatePicture {
+    onUpdatePicture {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeletePicture = /* GraphQL */ `
+  subscription OnDeletePicture {
+    onDeletePicture {
+      id
+      name
+      owner
+      file {
+        bucket
+        region
+        key
+      }
       createdAt
       updatedAt
     }
