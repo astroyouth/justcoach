@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 import Amplify from 'aws-amplify';
 import aws_config from "./aws-exports";
 import AWS from "aws-sdk";
@@ -141,4 +142,4 @@ class NewCoaches extends Component {
 
 
 
-export default NewCoaches;
+export default withAuthenticator(NewCoaches);

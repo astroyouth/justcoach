@@ -11,7 +11,7 @@ class landingpage extends Component {
                     <hr className="my-4"/>
                         <p>you can Select from a range of highly experienced coaches and chose the best bla blaa blaaa! Kazakhstan is the greatest country in the world. All other countries are run by little girls. Kazakhstan is number-one exporter of potassium. Other Central Asian countries have inferior potassium. Kazakhstan is the greatest country in the world. All other countries is the home of the gays...</p>
                         <p className="lead">
-                            <a className="btn btn-primary btn-lg" href="/Gallery" role="button">Learn more</a>
+                            <a className="btn btn-primary btn-lg" href="/Gallery" role="button">Gallery of Coaches</a>
                         </p>
             </div>
 

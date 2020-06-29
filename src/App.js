@@ -1,17 +1,20 @@
 import { withAuthenticator } from '@aws-amplify/ui-react'
+import { render } from '@testing-library/react';
 import React, { Component } from 'react'
 import Amplify, { Storage } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+// Import scripts that render each page
 import newCoach from './newCoach';
 import showCoaches from './showCoaches';
 import MainNav from './mainNav';
 import landing from './landing';
+import showOneCoach from './showOneCoach'
 Amplify.configure(awsconfig);
 
 
-class App extends Component {
-  render() {
+const App =() => {
+  render(); {
     return (
       <BrowserRouter>
         <MainNav />
@@ -20,7 +23,7 @@ class App extends Component {
             <Route path="/" component={landing} exact/>
             <Route path="/AddCoach" component={newCoach} exact/>
             <Route path="/Gallery" component={showCoaches} exact />
-            {/* <Route path="/Gallery/:id" component={showOneCoach} /> */}
+            <Route path="/Gallery/:id" component={showOneCoach} />
           </Switch>
         </main>
       </BrowserRouter>
